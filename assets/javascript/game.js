@@ -33,11 +33,23 @@ console.log(t1ns.innerHTML)
 t1sb.addEventListener("click", function () {
     console.log("Team One Shoots!!")
     t1ns.innerHTML = Number(t1ns.innerHTML) + 1
+    if (Math.random() * 100 < 72) {
+        t1ng.innerHTML = Number(t1ng.innerHTML) + 1
+        }
+        else if (Math.random() * 100 < 5) {
+        t1ng.innerHTML = Number(t1ng.innerHTML) + 0
+        }
 })
 
 t2sb.addEventListener("click", function () {
     console.log("Team Two Shoots!!")
     t2ns.innerHTML = Number(t2ns.innerHTML) + 1
+    if (Math.random() * 100 < 72) {
+        t2ng.innerHTML = Number(t2ng.innerHTML) + 1
+        }
+        else if (Math.random() * 100 < 5) {
+        t2ng.innerHTML = Number(t2ng.innerHTML) + 0
+        }
 })
 
 
