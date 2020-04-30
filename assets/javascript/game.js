@@ -21,7 +21,8 @@ t1ns = document.querySelector("#teamone-numshots")
 t2ns = document.querySelector("#teamtwo-numshots")
 t1ng = document.querySelector("#teamone-numgoals")
 t2ng = document.querySelector("#teamtwo-numgoals")
-num_resets = document.querySelector("#num-resets")
+resetB = document.querySelector("#reset-button")
+numresets = document.querySelector("#num-resets")
 
 // let t1ns = 0
 // let t2ns = 0
@@ -35,6 +36,7 @@ t1sb.addEventListener("click", function () {
     t1ns.innerHTML = Number(t1ns.innerHTML) + 1
     if (Math.random() * 100 < 72) {
         t1ng.innerHTML = Number(t1ng.innerHTML) + 1
+        console.log("Team One Goal!!!")
         }
         else if (Math.random() * 100 < 5) {
         t1ng.innerHTML = Number(t1ng.innerHTML) + 0
@@ -46,10 +48,20 @@ t2sb.addEventListener("click", function () {
     t2ns.innerHTML = Number(t2ns.innerHTML) + 1
     if (Math.random() * 100 < 72) {
         t2ng.innerHTML = Number(t2ng.innerHTML) + 1
+        console.log("Team Two Goal!!!")
         }
         else if (Math.random() * 100 < 5) {
         t2ng.innerHTML = Number(t2ng.innerHTML) + 0
         }
+})
+
+resetB.addEventListener("click", function () {
+    console.log("RESET GAME!")
+    t1ns.innerHTML = 0
+    t2ns.innerHTML = 0
+    t1ng.innerHTML = 0
+    t2ng.innerHTML = 0
+    numresets.innerHTML = Number(numresets.innerHTML) + 1
 })
 
 
